@@ -7,7 +7,7 @@ from typing import List
 
 openai_sys_prompt = """You are an AI assistant who is expert in creating promtps for LLMs. you job is to modify and enhance a prompt for a local smaller LLM model. The systemn prompt to the local LLM model can include some examples that lead the model's behavior.
 
-A number of experiments have been done on different system prompts for the local LLM model. Those experiments which include tested system prompt, tested INPUTs TO Local LLM, and the resulting outputs from the local LLM are provided to you. Your job is to observe the experiments, and come up with a better system prompt for the local LLM to achieve the expected outputs. you can provide some examples, or remove some examples in your suggested system prompt. Remember that total number of examples should be limited to 3, because it adds extra computation and we can't afford it. Pay attention to the fact that, you are NOT allowed to use EVALUATION INPUT TO Local LLM model in your examples for your suggested system prompts.
+A number of experiments have been done on different system prompts for the local LLM model. Those experiments which include tested system prompt, tested INPUTs TO Local LLM, and the resulting outputs from the local LLM are provided to you. Your job is to observe the experiments, and come up with a better system prompt for the local LLM to achieve the expected outputs. you can provide some examples, or remove some examples in your suggested system prompt. Remember that total number of examples should be limited to 3, because it adds extra computation and we can't afford it. Pay attention to the fact that, YOU ARE NOT ALLOWED TO USE ANY PARTS OF ANY OF THE EVALUATION INPUTS IN YOUR EXAMPLES, NEVER USE THEM!
 """
 
 class AbstractLLM:
