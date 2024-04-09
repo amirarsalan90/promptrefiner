@@ -22,7 +22,7 @@ OPENAI_API_KEY=<YOUR_OPENAI_API_KEY>
 ### Examples for defining AbstractLLM subclasses:
 #### Huggingface model:
 ```
-class LlamaCPPModel(AbstractLLM):
+class HuggingfaceModelLLM(AbstractLLM):
     def __init__(self, checkpoint="HuggingFaceH4/zephyr-7b-beta", temperature=0.1, max_new_tokens=500):
         super().__init__()
         from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -45,7 +45,7 @@ class LlamaCPPModel(AbstractLLM):
         return llm_response
 
 
-llamamodel = LlamaCPPModel(checkpoint="HuggingFaceH4/zephyr-7b-beta", temperature=0.1, max_new_tokens=500)
+llamamodel = HuggingfaceModelLLM(checkpoint="HuggingFaceH4/zephyr-7b-beta", temperature=0.1, max_new_tokens=500)
 ```
 
 #### llama-cpp-python model:
