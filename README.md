@@ -36,7 +36,7 @@ class LlamaCPPModel(AbstractLLM):
     def predict(self, input_text, system_prompt):
         
         messages=[
-            {"role": "system", "content": system_prompt},  # Update this as per your needs
+            {"role": "system", "content": system_prompt}, 
             {"role": "user", "content": input_text}
         ]
         model_inputs = self.tokenizer.apply_chat_template(messages, tokenize=True, add_generation_prompt=True, return_tensors='pt').to('cuda')
@@ -62,7 +62,7 @@ class LlamaCPPModel(AbstractLLM):
         response = self.client.chat.completions.create(
         model="mistral",
         messages=[
-            {"role": "system", "content": system_prompt},  # Update this as per your needs
+            {"role": "system", "content": system_prompt}, 
             {"role": "user", "content": input_text}
         ],
         temperature=self.temperature,
