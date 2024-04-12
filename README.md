@@ -1,4 +1,6 @@
 # promptrefiner
+### Medium Article explaining the tool:
+[promptrefiner: Using GPT-4 to Create a Perfect System Prompt for Your Local LLM](https://medium.com/towards-data-science/promptrefiner-using-gpt-4-to-create-perfect-system-prompt-8e2f1b6cb758)
 ### Usage:
 * create a file in the root folder named `env_variables.env`. inside the file, include your OpenAI API Key:
 ```
